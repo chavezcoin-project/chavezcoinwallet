@@ -17,7 +17,7 @@
 
 #pragma once
 
-#include "Common/GlassFrame.h"
+#include "Gui/Common/GlassFrame.h"
 
 class QLabel;
 

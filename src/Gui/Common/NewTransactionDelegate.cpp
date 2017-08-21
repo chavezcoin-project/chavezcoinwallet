@@ -17,7 +17,7 @@
 
 #include "NewTransactionDelegate.h"
 
-#include "Common/MagicLabel.h"
+#include "Gui/Common/MagicLabel.h"
 
 #include "Models/TransactionsModel.h"
 

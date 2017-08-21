@@ -26,10 +26,10 @@
 #include "BlockExplorerFrame.h"
 #include "Settings/Settings.h"
 #include "BlockDetailsDialog.h"
-#include "Common/RightAlignmentColumnDelegate.h"
+#include "Gui/Common/RightAlignmentColumnDelegate.h"
 #include "Models/BlockchainModel.h"
 #include "Models/TransactionPoolModel.h"
-#include "Common/PoolTransactionDetailsDialog.h"
+#include "Gui/Common/PoolTransactionDetailsDialog.h"
 #include "WindowedBlockModel.h"
 
 #include "ui_BlockExplorerFrame.h"

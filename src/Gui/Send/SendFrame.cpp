@@ -23,7 +23,7 @@
 
 #include "SendFrame.h"
 #include "Settings/Settings.h"
-#include "Common/QuestionDialog.h"
+#include "Gui/Common/QuestionDialog.h"
 #include "ICryptoNoteAdapter.h"
 #include "IDonationManager.h"
 #include "INodeAdapter.h"

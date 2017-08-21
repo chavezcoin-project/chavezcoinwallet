@@ -27,7 +27,7 @@
 #include <Common/Util.h>
 
 #include "BlockchainInstaller.h"
-#include "Common/QuestionDialog.h"
+#include "Gui/Common/QuestionDialog.h"
 #include "Settings/Settings.h"
 
 #include "ui_QuestionDialog.h"

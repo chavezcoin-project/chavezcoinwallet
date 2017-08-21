@@ -21,7 +21,7 @@
 
 #include "TransferFrame.h"
 #include "Settings/Settings.h"
-#include "Common/AddressBookDialog.h"
+#include "Gui/Common/AddressBookDialog.h"
 #include "ICryptoNoteAdapter.h"
 #include "Models/AddressBookModel.h"
 #include "Style/Style.h"

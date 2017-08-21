@@ -19,7 +19,7 @@
 
 #include "TransactionTransfersRenderer.h"
 #include "Settings/Settings.h"
-#include "Common/RightAlignmentColumnDelegate.h"
+#include "Gui/Common/RightAlignmentColumnDelegate.h"
 #include "DrawableTransfersModel.h"
 #include "Style/Style.h"
 #include "Models/TransactionsModel.h"

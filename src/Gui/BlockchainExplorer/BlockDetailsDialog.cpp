@@ -21,7 +21,7 @@
 
 #include "BlockDetailsDialog.h"
 #include "Settings/Settings.h"
-#include "Common/RightAlignmentColumnDelegate.h"
+#include "Gui/Common/RightAlignmentColumnDelegate.h"
 #include "Models/BlockchainModel.h"
 #include "TransactionsBlockModel.h"
 #include "Style/Style.h"

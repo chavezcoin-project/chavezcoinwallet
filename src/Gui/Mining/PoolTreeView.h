@@ -19,7 +19,7 @@
 
 #include <QDateTime>
 
-#include "Common/WalletTreeView.h"
+#include "Gui/Common/WalletTreeView.h"
 
 namespace WalletGui {
 

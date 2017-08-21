@@ -17,7 +17,7 @@
 
 #pragma once
 
-#include "Common/WalletWindowedItemModel.h"
+#include "Gui/Common/WalletWindowedItemModel.h"
 #include "FilteredBlockModel.h"
 
 namespace WalletGui {

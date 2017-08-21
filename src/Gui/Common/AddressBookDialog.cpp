@@ -17,7 +17,7 @@
 
 #include "AddressBookDialog.h"
 #include "Models/AddressBookModel.h"
-#include "Common/RightAlignmentColumnDelegate.h"
+#include "Gui/Common/RightAlignmentColumnDelegate.h"
 
 #include "ui_AddressBookDialog.h"
 

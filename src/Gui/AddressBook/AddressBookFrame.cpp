@@ -22,8 +22,8 @@
 
 #include "AddressBookFrame.h"
 #include "AddressBookDelegate.h"
-#include "Common/QuestionDialog.h"
-#include "Common/RightAlignmentColumnDelegate.h"
+#include "Gui/Common/QuestionDialog.h"
+#include "Gui/Common/RightAlignmentColumnDelegate.h"
 #include "DonationColumnDelegate.h"
 #include "Models/AddressBookModel.h"
 #include "NewAddressDialog.h"

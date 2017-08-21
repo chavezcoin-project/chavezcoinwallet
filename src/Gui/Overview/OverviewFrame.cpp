@@ -19,12 +19,12 @@
 #include <QDataWidgetMapper>
 
 #include "OverviewFrame.h"
-#include "Common/NewTransactionDelegate.h"
-#include "Common/TransactionDetailsDialog.h"
-#include "Common/TransactionsAmountDelegate.h"
-#include "Common/TransactionsHeaderView.h"
-#include "Common/TransactionsTimeDelegate.h"
-#include "Common/RightAlignmentColumnDelegate.h"
+#include "Gui/Common/NewTransactionDelegate.h"
+#include "Gui/Common/TransactionDetailsDialog.h"
+#include "Gui/Common/TransactionsAmountDelegate.h"
+#include "Gui/Common/TransactionsHeaderView.h"
+#include "Gui/Common/TransactionsTimeDelegate.h"
+#include "Gui/Common/RightAlignmentColumnDelegate.h"
 #include "Models/TransactionsModel.h"
 #include "Models/SortedTransactionsModel.h"
 #include "Models/WalletStateModel.h"
