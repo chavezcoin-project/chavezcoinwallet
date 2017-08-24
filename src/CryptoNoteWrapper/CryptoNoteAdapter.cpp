@@ -40,7 +40,7 @@ const char OLD_CORE_LOG_FILE_NAME[] = "bytecoinwallet.log";
 CryptoNoteAdapter::CryptoNoteAdapter(const QDir& _dataDir, bool _testnet, bool _debug, QObject* _parent) : QObject(_parent),
   m_dataDir(_dataDir), m_testnet(_testnet), m_debug(_debug), m_connectionMethod(ConnectionMethod::AUTO),
   m_localDaemodPort(CryptoNote::RPC_DEFAULT_PORT), m_remoteDaemonUrl(), m_coreLogger(), m_walletLogger(),
-  m_currency(CryptoNote::CurrencyBuilder(m_coreLogger).testnet(m_testnet).currency()),
+  m_currency(CryptoNote::CurrencyBuilder(m_coreLogger).currency()),
   m_nodeAdapter(nullptr), m_autoConnectionTimerId(-1) {
 }
 
