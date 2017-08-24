@@ -48,7 +48,7 @@ public:
     QAction *m_openWalletAction;
     QAction *m_encryptWalletAction;
     QAction *m_changePasswordAction;
-    QAction *m_aboutBytecoinAction;
+    QAction *m_aboutChavezcoinAction;
     QAction *m_aboutQtAction;
     QAction *m_backupWalletAction;
     QAction *m_autostartAction;
@@ -140,7 +140,7 @@ public:
         MainWindow->setMinimumSize(QSize(1260, 600));
         MainWindow->setMaximumSize(QSize(16777215, 16777215));
         QIcon icon;
-        icon.addFile(QStringLiteral(":/images/bytecoin"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/images/chavezcoin"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
         m_exitAction = new QAction(MainWindow);
         m_exitAction->setObjectName(QStringLiteral("m_exitAction"));
@@ -158,9 +158,9 @@ public:
         m_changePasswordAction = new QAction(MainWindow);
         m_changePasswordAction->setObjectName(QStringLiteral("m_changePasswordAction"));
         m_changePasswordAction->setEnabled(true);
-        m_aboutBytecoinAction = new QAction(MainWindow);
-        m_aboutBytecoinAction->setObjectName(QStringLiteral("m_aboutBytecoinAction"));
-        m_aboutBytecoinAction->setEnabled(true);
+        m_aboutChavezcoinAction = new QAction(MainWindow);
+        m_aboutChavezcoinAction->setObjectName(QStringLiteral("m_aboutChavezcoinAction"));
+        m_aboutChavezcoinAction->setEnabled(true);
         m_aboutQtAction = new QAction(MainWindow);
         m_aboutQtAction->setObjectName(QStringLiteral("m_aboutQtAction"));
         m_aboutQtAction->setEnabled(true);
@@ -580,7 +580,7 @@ public:
         menuSettings->addAction(menuThemes->menuAction());
         menuHelp->addAction(m_communityForumAction);
         menuHelp->addAction(m_reportIssueAction);
-        menuHelp->addAction(m_aboutBytecoinAction);
+        menuHelp->addAction(m_aboutChavezcoinAction);
         menuHelp->addAction(m_aboutQtAction);
 
         retranslateUi(MainWindow);
@@ -590,7 +590,7 @@ public:
         QObject::connect(m_changePasswordAction, SIGNAL(triggered()), MainWindow, SLOT(encryptWallet()));
         QObject::connect(m_aboutQtAction, SIGNAL(triggered()), MainWindow, SLOT(aboutQt()));
         QObject::connect(m_backupWalletAction, SIGNAL(triggered()), MainWindow, SLOT(backupWallet()));
-        QObject::connect(m_aboutBytecoinAction, SIGNAL(triggered()), MainWindow, SLOT(about()));
+        QObject::connect(m_aboutChavezcoinAction, SIGNAL(triggered()), MainWindow, SLOT(about()));
         QObject::connect(m_overviewButton, SIGNAL(toggled(bool)), m_overviewFrame, SLOT(setVisible(bool)));
         QObject::connect(m_transactionsButton, SIGNAL(toggled(bool)), m_transactionsFrame, SLOT(setVisible(bool)));
         QObject::connect(m_addressBookButton, SIGNAL(toggled(bool)), m_addressBookFrame, SLOT(setVisible(bool)));
@@ -626,7 +626,7 @@ public:
 #ifndef QT_NO_TOOLTIP
         m_changePasswordAction->setToolTip(QApplication::translate("MainWindow", "Change password", 0));
 #endif // QT_NO_TOOLTIP
-        m_aboutBytecoinAction->setText(QApplication::translate("MainWindow", "About Bytecoin", 0));
+        m_aboutChavezcoinAction->setText(QApplication::translate("MainWindow", "About Chavezcoin", 0));
         m_aboutQtAction->setText(QApplication::translate("MainWindow", "About Qt", 0));
         m_backupWalletAction->setText(QApplication::translate("MainWindow", "Backup wallet", 0));
         m_autostartAction->setText(QApplication::translate("MainWindow", "Start on system login", 0));
