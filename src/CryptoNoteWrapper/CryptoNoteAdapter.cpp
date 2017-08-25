@@ -49,7 +49,6 @@ CryptoNoteAdapter::~CryptoNoteAdapter() {
 
 int CryptoNoteAdapter::init(ConnectionMethod _connectionMethod, quint16 _localDaemonPort,
   const QUrl& _remoteDaemonUrl) {
-  WalletLogger::debug(tr("[CryptoNote wrapper] Initializing..."));
   Q_ASSERT(m_nodeAdapter == nullptr);
   m_connectionMethod = _connectionMethod;
   m_localDaemodPort = _localDaemonPort;
@@ -108,7 +107,7 @@ bool CryptoNoteAdapter::isValidPaymentId(const QString& _paymentId) const {
 }
 
 QString CryptoNoteAdapter::getCurrencyTicker() const {
-  return "bcn";
+  return "cc";
 }
 
 quint64 CryptoNoteAdapter::getMinimalFee() const {

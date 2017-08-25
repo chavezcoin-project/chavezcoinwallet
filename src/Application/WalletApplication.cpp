@@ -2,18 +2,18 @@
 //
 // This file is part of Bytecoin.
 //
-// Chavezcoin is free software: you can redistribute it and/or modify
+// Bytecoin is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// Chavezcoin is distributed in the hope that it will be useful,
+// Bytecoin is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with Chavezcoin.  If not, see <http://www.gnu.org/licenses/>.
+// along with Bytecoin.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QEvent>
 #include <QFileOpenEvent>
@@ -59,7 +59,7 @@ namespace WalletGui {
 
 namespace {
 
-const char BYTECOIN_URI_SCHEME_NAME[] = "chavezcoin";
+const char BYTECOIN_URI_SCHEME_NAME[] = "bytecoin";
 const QRegularExpression LOG_SPLASH_REG_EXP("\\[Core\\] Imported block with index");
 
 quint16 findPort() {
@@ -104,7 +104,7 @@ WalletApplication::WalletApplication(int& _argc, char** _argv) : QApplication(_a
   m_systemTrayIcon(new QSystemTrayIcon(this)), m_applicationEventHandler(new ApplicationEventHandler(this)),
   m_optimizationManager(nullptr), m_blogReader(new BlogReader(this)), m_mainWindow(nullptr), m_splash(nullptr),
   m_logWatcher(nullptr), m_isAboutToQuit(false) {
-  setApplicationName("chavezcoinwallet");
+  setApplicationName("bytecoinwallet");
   setApplicationVersion(Settings::instance().getVersion());
   setQuitOnLastWindowClosed(false);
   setStyle(QStyleFactory::create("fusion"));
@@ -140,8 +140,7 @@ bool WalletApplication::init() {
   makeDataDir();
   WalletLogger::init(Settings::instance().getDataDir(), Settings::instance().hasDebugOption(), this);
   WalletLogger::info(tr("[Application] Initializing..."));
-  m_lockFile = new QLockFile(Settings::instance().getDataDir().absoluteFilePath("chavezcoinwallet.lock"));
-  WalletLogger::info(tr("[Application] 2"));
+  m_lockFile = new QLockFile(Settings::instance().getDataDir().absoluteFilePath("bytecoinwallet.lock"));
   QUrl paymentUrl = QUrl::fromUserInput(arguments().last());
   if (paymentUrl.scheme() != BYTECOIN_URI_SCHEME_NAME) {
     paymentUrl = QUrl();
@@ -153,9 +152,9 @@ bool WalletApplication::init() {
   }
 #endif
   if (!m_lockFile->tryLock()) {
-    WalletLogger::warning(tr("[Application] Chavezcoin wallet already running"));
+    WalletLogger::warning(tr("[Application] Bytecoin wallet already running"));
     if (!paymentUrl.isValid()) {
-      QMessageBox::warning(nullptr, QObject::tr("Fail"), "Chavezcoin wallet already running");
+      QMessageBox::warning(nullptr, QObject::tr("Fail"), "Bytecoin wallet already running");
     }
 
     return false;
@@ -263,9 +262,9 @@ bool WalletApplication::initCryptoNoteAdapter() {
       okButton->setText(QObject::tr("Ok"));
       dlg.addButton(okButton, QMessageBox::AcceptRole);
       dlg.setText(QObject::tr("The database is currently used by another application or service.\n"
-      "If you have chavezcoind with non-default RPC port, you should terminate it and relaunch ChavezcoinWallet\n"
+      "If you have bytecoind with non-default RPC port, you should terminate it and relaunch BytecoinWallet\n"
       "or\n"
-      "Set the Local deamon required port in ChavezcoinWallet Menu/Preferences/Connection settings."));
+      "Set the Local deamon required port in BytecoinWallet Menu/Preferences/Connection settings."));
       dlg.exec();
       return false;
     }

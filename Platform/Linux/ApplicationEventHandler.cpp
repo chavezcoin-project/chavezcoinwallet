@@ -48,7 +48,6 @@ ApplicationEventHandler::~ApplicationEventHandler() {
 }
 
 void ApplicationEventHandler::init() {
-  WalletLogger::info(tr("[Application] 2"));
   QDBusConnection::sessionBus().connect(DBUS_GNOME_SS_SERVICE_NAME, DBUS_GNOME_SS_PATH, DBUS_GNOME_SS_INTERFACE, DBUS_GNOME_SS_MEMBER,
     this, SLOT(screenStateChanged(bool)));
   QDBusConnection::sessionBus().connect(DBUS_FREEDESKTOP_SS_SERVICE_NAME, DBUS_FREEDESKTOP_SS_PATH, DBUS_FREEDESKTOP_SS_INTERFACE,
@@ -59,6 +58,7 @@ void ApplicationEventHandler::init() {
   if (!listen(PAYMENT_SERVER_NAME)) {
     WalletLogger::critical(tr("[Application event handler] Start payment server error: %1.").arg(errorString()));
   }
+  WalletLogger::info(tr("[ApplicationEventHandler] 1"));
 }
 
 QUrl ApplicationEventHandler::getLastReceivedUrl() {

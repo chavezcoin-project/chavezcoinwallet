@@ -620,7 +620,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>SEND BYTECOINS</string>
+            <string>SEND CHAVEZCOINS</string>
            </property>
            <property name="checkable">
             <bool>true</bool>

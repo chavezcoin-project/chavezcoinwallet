@@ -670,7 +670,7 @@ public:
         m_balanceCopyLabel->setText(QApplication::translate("MainWindow", "Copied!", 0));
         m_balanceIconLabel->setText(QString());
         m_overviewButton->setText(QApplication::translate("MainWindow", "OVERVIEW", 0));
-        m_sendButton->setText(QApplication::translate("MainWindow", "SEND BYTECOINS", 0));
+        m_sendButton->setText(QApplication::translate("MainWindow", "SEND CHAVEZCOINS", 0));
         m_transactionsButton->setText(QApplication::translate("MainWindow", "TRANSACTIONS", 0));
         m_blockExplorerButton->setText(QApplication::translate("MainWindow", "BLOCK EXPLORER", 0));
         m_addressBookButton->setText(QApplication::translate("MainWindow", "CONTACTS", 0));
