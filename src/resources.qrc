@@ -26,8 +26,8 @@
         <file alias="pending_balance">icons/pending_balance.png</file>
         <file alias="total_balance">icons/total_balance.png</file>
         <file alias="dark/balance">icons/balance.png</file>
-        <file alias="dark/logo">icons/logo.png</file>
-        <file alias="light/logo">icons/logo_bl.png</file>
+        <file alias="dark/logo">icons/logo_cc.png</file>
+        <file alias="light/logo">icons/logo_bl_cc.png</file>
         <file alias="inp_clock1">icons/inp_clock1.png</file>
         <file alias="inp_clock2">icons/inp_clock2.png</file>
         <file alias="inp_clock3">icons/inp_clock3.png</file>
